@@ -7,7 +7,7 @@ pkgname='ros-noetic-rqt-bag-plugins'
 pkgver='0.5.1'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -39,9 +39,10 @@ depends=(
 	python-cairo
 )
 
-_dir="rqt_bag-${pkgver}/rqt_bag_plugins"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_bag/archive/${pkgver}.tar.gz")
-sha256sums=('52c194b9bdfc63b03b88fdb9d851715ba456a9fc016cf22c8f9cbf0c0bc9ecf9')
+_commit="2f6fbd558baa8e8038f4d11bb20e27c75537d39c"
+_dir="rqt_bag-${_commit}/rqt_bag_plugins"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_bag/archive/${_commit}.tar.gz")
+sha256sums=('2ca91b332de127ca208d113146e9fbf5e04dfaf886b90eefc147a6aec7e1a997')
 
 build() {
 	# Use ROS environment variables.
